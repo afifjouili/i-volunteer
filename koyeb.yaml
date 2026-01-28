@@ -1,0 +1,18 @@
+type: web
+name: i-volunteer
+build:
+  docker:
+    dockerfile: Dockerfile
+instance_types:
+- nano
+regions:
+- fra
+ports:
+- port: 80
+  protocol: http
+routes:
+- path: /
+  port: 80
+env:
+  VITE_SUPABASE_URL: https://xzvddxbrlsgbxnydamlk.supabase.co
+  VITE_SUPABASE_PUBLISHABLE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh6dmRkeGJybHNnYnhueWRhbWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYxNTM3NTcsImV4cCI6MjA4MTcyOTc1N30.vz68nHpW9tQbPJow3eS1E3qjGPnr7Hvmv63dU57Qdp8
